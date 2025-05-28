@@ -1,7 +1,7 @@
 
 import Layout from '@/components/Layout';
 import { Button } from '@/components/ui/button';
-import { Github, Linkedin, Mail, Phone } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone, Download } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Index = () => {
@@ -50,6 +50,22 @@ const Index = () => {
                   >
                     <Link to="/contact">Hire Me</Link>
                   </Button>
+
+                  <Button 
+                    asChild
+                    variant="outline"
+                    className="border-2 border-purple-500/50 text-purple-400 hover:bg-purple-500/10 px-8 py-3 text-lg font-medium"
+                  >
+                    <a 
+                      href="https://drive.google.com/file/d/your-cv-file-id/view" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2"
+                    >
+                      <Download className="w-5 h-5" />
+                      Download CV
+                    </a>
+                  </Button>
                 </div>
                 
                 <div className="flex gap-6">
@@ -88,7 +104,7 @@ const Index = () => {
                 <div className="relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full blur-xl opacity-75 animate-pulse"></div>
                   <img 
-                    src="/lovable-uploads/4e30eded-2298-433c-aeca-6508d383744f.png"
+                    src="https://i.postimg.cc/7hfmKGvp/profile-pic.jpg"
                     alt="Aakash Joshi"
                     className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-full object-cover border-4 border-cyan-500/50 shadow-2xl shadow-cyan-500/25"
                   />
