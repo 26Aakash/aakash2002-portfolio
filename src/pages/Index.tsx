@@ -99,7 +99,7 @@ const Index = () => {
         </div>
       </div>
       
-      <style jsx>{`
+      <style>{`
         .wave {
           animation: wave 2s infinite;
           transform-origin: 70% 70%;
