@@ -115,11 +115,38 @@ const Index = () => {
   return (
     <Layout>
       {/* Home Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center px-4 py-8">
-        <div className="max-w-6xl mx-auto text-center">
+      <section id="home" className="min-h-screen flex items-center justify-center px-4 py-8 relative overflow-hidden">
+        {/* Enhanced Background Effects */}
+        <div className="absolute inset-0">
+          {/* Animated gradient orbs */}
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-500/30 to-pink-500/30 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-gradient-to-r from-teal-500/20 to-cyan-500/20 rounded-full blur-2xl animate-pulse delay-500"></div>
+          
+          {/* Floating particles */}
+          <div className="absolute inset-0">
+            {[...Array(20)].map((_, i) => (
+              <div
+                key={i}
+                className="absolute w-2 h-2 bg-cyan-400/30 rounded-full animate-pulse"
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                  animationDelay: `${Math.random() * 3}s`,
+                  animationDuration: `${3 + Math.random() * 2}s`
+                }}
+              ></div>
+            ))}
+          </div>
+          
+          {/* Grid pattern overlay */}
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.05%22%3E%3Ccircle%20cx%3D%227%22%20cy%3D%227%22%20r%3D%221%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-40"></div>
+        </div>
+        
+        <div className="max-w-6xl mx-auto text-center relative z-10">
           <div className="animate-fade-in">
             <div className="mb-8">
-              <span className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-full text-cyan-400 text-sm font-medium mb-6 border border-cyan-500/30">
+              <span className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500/20 to-purple-600/20 rounded-full text-cyan-400 text-sm font-medium mb-6 border border-cyan-500/30 backdrop-blur-sm">
                 🚀 Building the Future with Code
               </span>
             </div>
@@ -192,7 +219,7 @@ const Index = () => {
                     href="https://github.com/26Aakash" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="p-3 rounded-full bg-gray-800/50 hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-purple-600/20 transition-all duration-300 hover:scale-110"
+                    className="p-3 rounded-full bg-gray-800/50 hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-purple-600/20 transition-all duration-300 hover:scale-110 backdrop-blur-sm"
                   >
                     <Github className="w-6 h-6 text-gray-400 hover:text-white" />
                   </a>
@@ -200,19 +227,19 @@ const Index = () => {
                     href="https://www.linkedin.com/in/aakash-joshi-8a1a63298/" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="p-3 rounded-full bg-gray-800/50 hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-purple-600/20 transition-all duration-300 hover:scale-110"
+                    className="p-3 rounded-full bg-gray-800/50 hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-purple-600/20 transition-all duration-300 hover:scale-110 backdrop-blur-sm"
                   >
                     <Linkedin className="w-6 h-6 text-gray-400 hover:text-white" />
                   </a>
                   <a 
                     href="mailto:joshiaakashhld@gmail.com"
-                    className="p-3 rounded-full bg-gray-800/50 hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-purple-600/20 transition-all duration-300 hover:scale-110"
+                    className="p-3 rounded-full bg-gray-800/50 hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-purple-600/20 transition-all duration-300 hover:scale-110 backdrop-blur-sm"
                   >
                     <Mail className="w-6 h-6 text-gray-400 hover:text-white" />
                   </a>
                   <a 
                     href="tel:9045685738"
-                    className="p-3 rounded-full bg-gray-800/50 hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-purple-600/20 transition-all duration-300 hover:scale-110"
+                    className="p-3 rounded-full bg-gray-800/50 hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-purple-600/20 transition-all duration-300 hover:scale-110 backdrop-blur-sm"
                   >
                     <Phone className="w-6 h-6 text-gray-400 hover:text-white" />
                   </a>
@@ -221,12 +248,24 @@ const Index = () => {
               
               <div className="flex-shrink-0">
                 <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full blur-xl opacity-75 animate-pulse"></div>
+                  {/* Enhanced glowing effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 rounded-full blur-2xl opacity-75 animate-pulse scale-110"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full blur-xl opacity-50 animate-pulse scale-105 delay-300"></div>
+                  
+                  {/* Profile image with enhanced styling */}
                   <img 
-                    src="https://i.postimg.cc/7hfmKGvp/profile-pic.jpg"
+                    src="https://i.postimg.cc/bYgHyFQD/pic-1.jpg"
                     alt="Aakash Joshi"
-                    className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full object-cover border-4 border-cyan-500/50 shadow-2xl shadow-cyan-500/25"
+                    className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full object-cover border-4 border-gradient-to-r from-cyan-400 to-purple-500 shadow-2xl shadow-cyan-500/25 transition-transform duration-300 hover:scale-105"
+                    style={{
+                      borderImage: 'linear-gradient(45deg, #22d3ee, #a855f7) 1'
+                    }}
                   />
+                  
+                  {/* Floating elements around the image */}
+                  <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full animate-bounce delay-700"></div>
+                  <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full animate-bounce delay-1000"></div>
+                  <div className="absolute top-1/4 -left-6 w-4 h-4 bg-gradient-to-r from-teal-400 to-cyan-400 rounded-full animate-pulse delay-500"></div>
                 </div>
               </div>
             </div>
@@ -235,8 +274,14 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="min-h-screen pt-24 px-4">
-        <div className="max-w-6xl mx-auto">
+      <section id="about" className="min-h-screen pt-24 px-4 relative overflow-hidden">
+        {/* Background effects for About section */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-l from-purple-500/20 to-transparent rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-72 h-72 bg-gradient-to-r from-cyan-500/20 to-transparent rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               About <span className="bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">Me</span>
@@ -305,8 +350,14 @@ const Index = () => {
       </section>
 
       {/* Skills Section */}
-      <section id="skills" className="min-h-screen pt-24 px-4">
-        <div className="max-w-6xl mx-auto">
+      <section id="skills" className="min-h-screen pt-24 px-4 relative overflow-hidden">
+        {/* Background effects for Skills section */}
+        <div className="absolute inset-0">
+          <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-gradient-to-r from-teal-500/20 to-blue-500/20 rounded-full blur-2xl animate-pulse delay-200"></div>
+          <div className="absolute bottom-1/3 right-1/4 w-64 h-64 bg-gradient-to-r from-pink-500/20 to-purple-500/20 rounded-full blur-2xl animate-pulse delay-700"></div>
+        </div>
+        
+        <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               My <span className="bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">Skills</span>
@@ -363,8 +414,14 @@ const Index = () => {
       </section>
 
       {/* Portfolio Section */}
-      <section id="portfolio" className="min-h-screen pt-24 px-4">
-        <div className="max-w-6xl mx-auto">
+      <section id="portfolio" className="min-h-screen pt-24 px-4 relative overflow-hidden">
+        {/* Background effects for Portfolio section */}
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-1/3 w-80 h-80 bg-gradient-to-br from-cyan-500/15 to-purple-500/15 rounded-full blur-3xl animate-pulse delay-400"></div>
+          <div className="absolute bottom-0 right-1/3 w-80 h-80 bg-gradient-to-tl from-pink-500/15 to-teal-500/15 rounded-full blur-3xl animate-pulse delay-900"></div>
+        </div>
+        
+        <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               My <span className="bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">Portfolio</span>
@@ -385,7 +442,7 @@ const Index = () => {
                     loading="lazy"
                   />
                   <div className="absolute top-4 right-4">
-                    <span className="px-3 py-1 bg-gradient-to-r from-cyan-500/80 to-purple-600/80 rounded-full text-xs text-white font-medium">
+                    <span className="px-3 py-1 bg-gradient-to-r from-cyan-500/80 to-purple-600/80 rounded-full">
                       {project.category}
                     </span>
                   </div>
@@ -440,8 +497,14 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="min-h-screen pt-24 px-4 pb-8">
-        <div className="max-w-6xl mx-auto">
+      <section id="contact" className="min-h-screen pt-24 px-4 pb-8 relative overflow-hidden">
+        {/* Background effects for Contact section */}
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-l from-purple-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse delay-600"></div>
+          <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-teal-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1200"></div>
+        </div>
+        
+        <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
               Get In <span className="bg-gradient-to-r from-cyan-400 to-purple-600 bg-clip-text text-transparent">Touch</span>
@@ -502,7 +565,7 @@ const Index = () => {
                       href="https://github.com/26Aakash" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="p-3 rounded-full bg-gray-800/50 hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-purple-600/20 transition-all duration-300 hover:scale-110"
+                      className="p-3 rounded-full bg-gray-800/50 hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-purple-600/20 transition-all duration-300 hover:scale-110 backdrop-blur-sm"
                     >
                       <Github className="w-6 h-6 text-gray-400 hover:text-white" />
                     </a>
@@ -510,7 +573,7 @@ const Index = () => {
                       href="https://www.linkedin.com/in/aakash-joshi-8a1a63298/" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="p-3 rounded-full bg-gray-800/50 hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-purple-600/20 transition-all duration-300 hover:scale-110"
+                      className="p-3 rounded-full bg-gray-800/50 hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-purple-600/20 transition-all duration-300 hover:scale-110 backdrop-blur-sm"
                     >
                       <Linkedin className="w-6 h-6 text-gray-400 hover:text-white" />
                     </a>
