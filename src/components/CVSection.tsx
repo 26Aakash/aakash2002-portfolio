@@ -18,7 +18,7 @@ const CVSection = () => {
           className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white border-0 shadow-lg shadow-cyan-500/25"
         >
           <a 
-            href="https://drive.google.com/file/d/your-cv-file-id/view" 
+            href="https://drive.google.com/file/d/1aWmQXBpI92NDtCSFLWJ_U6SlYTJnKbOy/view?usp=sharing" 
             target="_blank" 
             rel="noopener noreferrer"
             className="flex items-center gap-2"
@@ -34,7 +34,7 @@ const CVSection = () => {
           className="border-2 border-purple-500/50 text-purple-400 hover:bg-purple-500/10"
         >
           <a 
-            href="https://drive.google.com/uc?export=download&id=your-cv-file-id" 
+            href="https://drive.google.com/uc?export=download&id=1aWmQXBpI92NDtCSFLWJ_U6SlYTJnKbOy" 
             target="_blank" 
             rel="noopener noreferrer"
             className="flex items-center gap-2"
