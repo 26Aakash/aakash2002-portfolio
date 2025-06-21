@@ -4,8 +4,8 @@ import { Download, Eye } from 'lucide-react';
 
 const CVSection = () => {
   return (
-    <div className="bg-gradient-to-r from-gray-800/50 to-gray-900/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20">
-      <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+    <div className="bg-gradient-to-r from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-lg p-6 border border-yellow-500/20">
+      <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
         My Resume
       </h3>
       <p className="text-gray-300 mb-6">
@@ -15,7 +15,7 @@ const CVSection = () => {
       <div className="flex gap-4 flex-wrap">
         <Button 
           asChild
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white border-0 shadow-lg shadow-cyan-500/25"
+          className="bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-600 hover:to-orange-700 text-black font-bold border-0 shadow-lg shadow-yellow-500/25"
         >
           <a 
             href="https://drive.google.com/file/d/1aWmQXBpI92NDtCSFLWJ_U6SlYTJnKbOy/view?usp=sharing" 
@@ -31,7 +31,7 @@ const CVSection = () => {
         <Button 
           asChild
           variant="outline"
-          className="border-2 border-purple-500/50 text-purple-400 hover:bg-purple-500/10"
+          className="border-2 border-orange-500/50 text-orange-400 hover:bg-orange-500/10"
         >
           <a 
             href="https://drive.google.com/uc?export=download&id=1aWmQXBpI92NDtCSFLWJ_U6SlYTJnKbOy" 

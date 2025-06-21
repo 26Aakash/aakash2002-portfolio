@@ -9,14 +9,14 @@ import CVSection from '@/components/CVSection';
 
 const Index = () => {
   const technicalSkills = [
-    { name: 'JavaScript/TypeScript', level: 90, color: 'from-yellow-400 to-yellow-600' },
-    { name: 'React.js', level: 85, color: 'from-blue-400 to-blue-600' },
-    { name: 'Node.js', level: 80, color: 'from-green-400 to-green-600' },
-    { name: 'MongoDB', level: 75, color: 'from-green-500 to-green-700' },
-    { name: 'Express.js', level: 80, color: 'from-gray-400 to-gray-600' },
-    { name: 'Blockchain/Solidity', level: 70, color: 'from-purple-400 to-purple-600' },
-    { name: 'Python', level: 75, color: 'from-blue-500 to-blue-700' },
-    { name: 'UI/UX Design', level: 80, color: 'from-pink-400 to-pink-600' },
+    { name: 'JavaScript/TypeScript', level: 90, color: 'from-yellow-400 to-orange-500' },
+    { name: 'React.js', level: 85, color: 'from-yellow-500 to-orange-600' },
+    { name: 'Node.js', level: 80, color: 'from-orange-400 to-yellow-500' },
+    { name: 'MongoDB', level: 75, color: 'from-yellow-400 to-orange-500' },
+    { name: 'Express.js', level: 80, color: 'from-orange-500 to-yellow-600' },
+    { name: 'Blockchain/Solidity', level: 70, color: 'from-yellow-500 to-orange-500' },
+    { name: 'Python', level: 75, color: 'from-orange-400 to-yellow-500' },
+    { name: 'UI/UX Design', level: 80, color: 'from-yellow-400 to-orange-600' },
   ];
 
   const softSkills = [
@@ -116,112 +116,101 @@ const Index = () => {
     <Layout>
       {/* Home Section */}
       <section id="home" className="min-h-screen flex items-center justify-center px-4 py-8 relative overflow-hidden">
-        {/* Professional Background Design */}
+        {/* Enhanced background with yellow/orange theme */}
         <div className="absolute inset-0">
           {/* Primary gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900/30 to-indigo-900/50"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
           
-          {/* Geometric shapes for professional look */}
+          {/* Yellow/Orange geometric elements */}
           <div className="absolute top-0 left-0 w-full h-full">
-            <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-blue-500/10 to-indigo-600/10 rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-tl from-purple-500/10 to-blue-600/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-            <div className="absolute top-1/2 left-1/3 w-96 h-96 bg-gradient-to-r from-indigo-500/8 to-purple-600/8 rounded-full blur-3xl animate-pulse delay-500"></div>
+            <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-yellow-500/15 to-orange-600/15 rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-tl from-orange-500/15 to-yellow-600/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
+            <div className="absolute top-1/2 left-1/3 w-96 h-96 bg-gradient-to-r from-yellow-500/10 to-orange-600/10 rounded-full blur-3xl animate-pulse delay-500"></div>
           </div>
           
-          {/* Professional grid pattern */}
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.03%22%3E%3Cpath%20d%3D%22M0%200h80v80H0V0zm20%2020v40h40V20H20zm20%2020h-20v-20h20v20z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
-          
-          {/* Floating professional elements */}
+          {/* Geometric line patterns */}
           <div className="absolute inset-0">
-            {[...Array(15)].map((_, i) => (
+            <svg width="100%" height="100%" className="opacity-30">
+              <g stroke="#fbbf24" strokeWidth="1" fill="none">
+                <path d="M0,200 Q400,50 800,200" opacity="0.4"/>
+                <path d="M200,0 Q600,300 1000,100" opacity="0.3"/>
+                <path d="M0,400 Q500,200 1000,400" opacity="0.2"/>
+              </g>
+              <g fill="#f59e0b" opacity="0.4">
+                <circle cx="100" cy="100" r="3"/>
+                <circle cx="300" cy="150" r="2"/>
+                <circle cx="500" cy="80" r="3"/>
+                <circle cx="700" cy="200" r="2"/>
+                <circle cx="900" cy="120" r="3"/>
+              </g>
+            </svg>
+          </div>
+          
+          {/* Floating elements */}
+          <div className="absolute inset-0">
+            {[...Array(20)].map((_, i) => (
               <div
                 key={i}
-                className="absolute w-1 h-1 bg-blue-400/40 rounded-full animate-pulse"
+                className="absolute w-1 h-1 bg-yellow-400/60 rounded-full animate-pulse"
                 style={{
                   left: `${Math.random() * 100}%`,
                   top: `${Math.random() * 100}%`,
                   animationDelay: `${Math.random() * 4}s`,
-                  animationDuration: `${4 + Math.random() * 3}s`
+                  animationDuration: `${3 + Math.random() * 3}s`
                 }}
               ></div>
             ))}
-          </div>
-          
-          {/* Subtle light rays */}
-          <div className="absolute inset-0">
-            <div className="absolute top-0 left-1/4 w-px h-full bg-gradient-to-b from-transparent via-blue-400/20 to-transparent"></div>
-            <div className="absolute top-0 right-1/3 w-px h-full bg-gradient-to-b from-transparent via-indigo-400/20 to-transparent"></div>
           </div>
         </div>
         
         <div className="max-w-6xl mx-auto text-center relative z-10">
           <div className="animate-fade-in">
             <div className="mb-8">
-              <span className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500/20 to-indigo-600/20 rounded-full text-blue-300 text-sm font-medium mb-6 border border-blue-500/30 backdrop-blur-sm shadow-lg">
-                ✨ Innovative Developer & Problem Solver
+              <span className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-yellow-500/20 to-orange-600/20 rounded-full text-yellow-300 text-sm font-medium mb-6 border border-yellow-500/30 backdrop-blur-sm shadow-lg">
+                🔥 Welcome to My Portfolio
               </span>
             </div>
             
             <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 mb-12">
               <div className="flex-1 text-center lg:text-left">
                 <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6">
-                  <span className="wave inline-block">👋</span> Hey there!{' '}
+                  <span className="wave inline-block">👋</span> Hello! I'm{' '}
                   <br className="hidden md:block" />
-                  I'm{' '}
-                  <span className="bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 bg-clip-text text-transparent animate-pulse">
-                    Aakash Joshi
+                  <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-500 bg-clip-text text-transparent animate-pulse">
+                    Fullstack Developer
                   </span>
                   <br className="hidden md:block" />
                   <span className="text-2xl md:text-3xl lg:text-4xl text-slate-300 font-light">
-                    ✨ Crafting Digital Excellence ✨
+                    Aakash Joshi ✨
                   </span>
                 </h1>
                 
                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-slate-300 mb-6">
-                  <span className="bg-gradient-to-r from-blue-400 to-indigo-500 bg-clip-text text-transparent">
-                    Full Stack Developer
-                  </span>{' '}
-                  & Innovation Enthusiast 🚀
+                  <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+                    A Passionate Full Stack Web Developer
+                  </span>
                 </h2>
                 
                 <p className="text-lg md:text-xl text-slate-400 mb-8 leading-relaxed">
-                  🎯 Transforming ideas into digital reality! I'm a passionate B.Tech Computer Science student 
-                  who specializes in building <span className="text-blue-400 font-semibold">exceptional web applications</span>. 
-                  From blockchain to AI, I explore cutting-edge technologies while maintaining 
-                  <span className="text-indigo-400 font-semibold"> clean, scalable code</span>. 
-                  Let's create something amazing together! 🌟
+                  Specializing in building exceptional digital experiences. 
+                  Proficient in both frontend and backend development, with a 
+                  strong foundation in modern web technologies and best practices. 🚀
                 </p>
                 
                 <div className="flex flex-wrap gap-4 mb-8 justify-center lg:justify-start">
                   <Button 
                     asChild
-                    className="bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800 text-white border-0 px-6 md:px-8 py-3 text-base md:text-lg font-medium shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-300 hover:scale-105"
+                    className="bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-600 hover:to-orange-700 text-black font-bold border-0 px-6 md:px-8 py-3 text-base md:text-lg shadow-lg shadow-yellow-500/25 hover:shadow-yellow-500/40 transition-all duration-300 hover:scale-105"
                   >
-                    <a href="#portfolio">🎨 View My Work</a>
+                    <a href="#portfolio">Download Resume</a>
                   </Button>
                   
                   <Button 
                     asChild
                     variant="outline"
-                    className="border-2 border-blue-500/50 text-blue-400 hover:bg-blue-500/10 px-6 md:px-8 py-3 text-base md:text-lg font-medium hover:scale-105 transition-all duration-300"
+                    className="border-2 border-yellow-500/70 text-yellow-400 hover:bg-yellow-500/10 px-6 md:px-8 py-3 text-base md:text-lg font-medium hover:scale-105 transition-all duration-300"
                   >
-                    <a href="#contact">💼 Let's Connect</a>
-                  </Button>
-
-                  <Button 
-                    asChild
-                    variant="outline"
-                    className="border-2 border-indigo-500/50 text-indigo-400 hover:bg-indigo-500/10 px-6 md:px-8 py-3 text-base md:text-lg font-medium hover:scale-105 transition-all duration-300"
-                  >
-                    <a 
-                      href="https://drive.google.com/file/d/1aWmQXBpI92NDtCSFLWJ_U6SlYTJnKbOy/view?usp=sharing" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2"
-                    >
-                      <Download className="w-5 h-5" />
-                      📄 Download CV
-                    </a>
+                    <a href="#contact">Hire Me</a>
                   </Button>
                 </div>
                 
@@ -230,50 +219,50 @@ const Index = () => {
                     href="https://github.com/26Aakash" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="p-3 rounded-full bg-slate-800/50 hover:bg-gradient-to-r hover:from-blue-500/20 hover:to-indigo-600/20 transition-all duration-300 hover:scale-110 backdrop-blur-sm border border-slate-700/50"
+                    className="p-3 rounded-full bg-slate-800/70 hover:bg-gradient-to-r hover:from-yellow-500/20 hover:to-orange-600/20 transition-all duration-300 hover:scale-110 backdrop-blur-sm border border-slate-700/50"
                   >
-                    <Github className="w-6 h-6 text-slate-400 hover:text-white" />
+                    <Github className="w-6 h-6 text-slate-400 hover:text-yellow-400" />
                   </a>
                   <a 
                     href="https://www.linkedin.com/in/aakash-joshi-8a1a63298/" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="p-3 rounded-full bg-slate-800/50 hover:bg-gradient-to-r hover:from-blue-500/20 hover:to-indigo-600/20 transition-all duration-300 hover:scale-110 backdrop-blur-sm border border-slate-700/50"
+                    className="p-3 rounded-full bg-slate-800/70 hover:bg-gradient-to-r hover:from-yellow-500/20 hover:to-orange-600/20 transition-all duration-300 hover:scale-110 backdrop-blur-sm border border-slate-700/50"
                   >
-                    <Linkedin className="w-6 h-6 text-slate-400 hover:text-white" />
+                    <Linkedin className="w-6 h-6 text-slate-400 hover:text-yellow-400" />
                   </a>
                   <a 
                     href="mailto:joshiaakashhld@gmail.com"
-                    className="p-3 rounded-full bg-slate-800/50 hover:bg-gradient-to-r hover:from-blue-500/20 hover:to-indigo-600/20 transition-all duration-300 hover:scale-110 backdrop-blur-sm border border-slate-700/50"
+                    className="p-3 rounded-full bg-slate-800/70 hover:bg-gradient-to-r hover:from-yellow-500/20 hover:to-orange-600/20 transition-all duration-300 hover:scale-110 backdrop-blur-sm border border-slate-700/50"
                   >
-                    <Mail className="w-6 h-6 text-slate-400 hover:text-white" />
+                    <Mail className="w-6 h-6 text-slate-400 hover:text-yellow-400" />
                   </a>
                   <a 
                     href="tel:9045685738"
-                    className="p-3 rounded-full bg-slate-800/50 hover:bg-gradient-to-r hover:from-blue-500/20 hover:to-indigo-600/20 transition-all duration-300 hover:scale-110 backdrop-blur-sm border border-slate-700/50"
+                    className="p-3 rounded-full bg-slate-800/70 hover:bg-gradient-to-r hover:from-yellow-500/20 hover:to-orange-600/20 transition-all duration-300 hover:scale-110 backdrop-blur-sm border border-slate-700/50"
                   >
-                    <Phone className="w-6 h-6 text-slate-400 hover:text-white" />
+                    <Phone className="w-6 h-6 text-slate-400 hover:text-yellow-400" />
                   </a>
                 </div>
               </div>
               
               <div className="flex-shrink-0">
                 <div className="relative">
-                  {/* Enhanced professional glowing effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-400 via-indigo-500 to-purple-500 rounded-full blur-2xl opacity-60 animate-pulse scale-110"></div>
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full blur-xl opacity-40 animate-pulse scale-105 delay-300"></div>
+                  {/* Enhanced yellow/orange glowing effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-500 rounded-full blur-2xl opacity-60 animate-pulse scale-110"></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full blur-xl opacity-40 animate-pulse scale-105 delay-300"></div>
                   
-                  {/* Profile image with professional styling */}
+                  {/* Profile image with yellow border */}
                   <img 
                     src="https://i.postimg.cc/bYgHyFQD/pic-1.jpg"
                     alt="Aakash Joshi"
-                    className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full object-cover border-4 border-blue-500/50 shadow-2xl shadow-blue-500/25 transition-transform duration-300 hover:scale-105"
+                    className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full object-cover border-4 border-yellow-500/70 shadow-2xl shadow-yellow-500/25 transition-transform duration-300 hover:scale-105"
                   />
                   
-                  {/* Professional floating elements */}
-                  <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full animate-bounce delay-700"></div>
-                  <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-r from-indigo-400 to-purple-500 rounded-full animate-bounce delay-1000"></div>
-                  <div className="absolute top-1/4 -left-6 w-4 h-4 bg-gradient-to-r from-blue-400 to-indigo-400 rounded-full animate-pulse delay-500"></div>
+                  {/* Floating elements with yellow/orange theme */}
+                  <div className="absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full animate-bounce delay-700"></div>
+                  <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-r from-orange-400 to-yellow-500 rounded-full animate-bounce delay-1000"></div>
+                  <div className="absolute top-1/4 -left-6 w-4 h-4 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full animate-pulse delay-500"></div>
                 </div>
               </div>
             </div>
@@ -283,20 +272,19 @@ const Index = () => {
 
       {/* About Section */}
       <section id="about" className="min-h-screen pt-24 px-4 relative overflow-hidden">
-        {/* Professional background for About section */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-800/50 via-blue-900/20 to-indigo-800/30"></div>
-          <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-l from-indigo-500/15 to-transparent rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-72 h-72 bg-gradient-to-r from-blue-500/15 to-transparent rounded-full blur-3xl"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-800/50 via-slate-900/30 to-slate-800/50"></div>
+          <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-l from-yellow-500/15 to-transparent rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-72 h-72 bg-gradient-to-r from-orange-500/15 to-transparent rounded-full blur-3xl"></div>
           
           {/* Professional geometric pattern */}
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.04%22%3E%3Cpath%20d%3D%22M36%2030c0-3.314-2.686-6-6-6s-6%202.686-6%206%202.686%206%206%206%206-2.686%206-6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-40"></div>
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23fbbf24%22%20fill-opacity%3D%220.04%22%3E%3Cpath%20d%3D%22M36%2030c0-3.314-2.686-6-6-6s-6%202.686-6%206%202.686%206%206%206%206-2.686%206-6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-40"></div>
         </div>
         
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              About <span className="bg-gradient-to-r from-blue-400 to-indigo-600 bg-clip-text text-transparent">Me</span>
+              About <span className="bg-gradient-to-r from-yellow-400 to-orange-600 bg-clip-text text-transparent">Me</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto">
               Passionate about technology, innovation, and creating solutions that make a difference
@@ -305,7 +293,7 @@ const Index = () => {
 
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 mb-16">
             <div className="animate-fade-in">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-blue-400">My Journey</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-yellow-400">My Journey</h2>
               <div className="space-y-6 text-slate-300 leading-relaxed">
                 <p className="text-base md:text-lg">
                   I'm Aakash Joshi, a passionate B.Tech Computer Science Engineering student at Birla Institute of Applied Sciences (BIAS), Bhimtal. 
@@ -331,14 +319,14 @@ const Index = () => {
 
           <div className="mb-16">
             <h2 className="text-2xl md:text-3xl font-bold mb-8 text-center">
-              Educational <span className="bg-gradient-to-r from-blue-400 to-indigo-600 bg-clip-text text-transparent">Background</span>
+              Educational <span className="bg-gradient-to-r from-yellow-400 to-orange-600 bg-clip-text text-transparent">Background</span>
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
               {education.map((edu, index) => (
-                <Card key={index} className="bg-slate-800/40 border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
+                <Card key={index} className="bg-slate-800/40 border-slate-700/50 hover:border-yellow-500/50 transition-all duration-300 hover:scale-105 backdrop-blur-sm">
                   <CardHeader>
                     <div className="flex items-center gap-3 mb-2">
-                      <div className="p-2 bg-gradient-to-r from-blue-500/20 to-indigo-600/20 rounded-lg">
+                      <div className="p-2 bg-gradient-to-r from-yellow-500/20 to-orange-600/20 rounded-lg">
                         {edu.icon}
                       </div>
                       <div className="flex items-center text-sm text-slate-400">
@@ -346,7 +334,7 @@ const Index = () => {
                         {edu.year}
                       </div>
                     </div>
-                    <CardTitle className="text-blue-400 text-lg">{edu.degree}</CardTitle>
+                    <CardTitle className="text-yellow-400 text-lg">{edu.degree}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="flex items-start gap-2">
@@ -363,20 +351,19 @@ const Index = () => {
 
       {/* Skills Section */}
       <section id="skills" className="min-h-screen pt-24 px-4 relative overflow-hidden">
-        {/* Professional background for Skills section */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/60 via-blue-900/25 to-indigo-900/40"></div>
-          <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-gradient-to-r from-blue-500/15 to-indigo-500/15 rounded-full blur-2xl animate-pulse delay-200"></div>
-          <div className="absolute bottom-1/3 right-1/4 w-64 h-64 bg-gradient-to-r from-indigo-500/15 to-purple-500/15 rounded-full blur-2xl animate-pulse delay-700"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/60 via-slate-800/25 to-slate-900/40"></div>
+          <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-gradient-to-r from-yellow-500/15 to-orange-500/15 rounded-full blur-2xl animate-pulse delay-200"></div>
+          <div className="absolute bottom-1/3 right-1/4 w-64 h-64 bg-gradient-to-r from-orange-500/15 to-yellow-500/15 rounded-full blur-2xl animate-pulse delay-700"></div>
           
           {/* Professional hexagon pattern */}
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.04%22%3E%3Cpath%20d%3D%22M40%2020L20%2040l20%2020%2020-20-20-20z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23fbbf24%22%20fill-opacity%3D%220.04%22%3E%3Cpath%20d%3D%22M40%2020L20%2040l20%2020%2020-20-20-20z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
         </div>
         
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              My <span className="bg-gradient-to-r from-blue-400 to-indigo-600 bg-clip-text text-transparent">Skills</span>
+              My <span className="bg-gradient-to-r from-yellow-400 to-orange-600 bg-clip-text text-transparent">Skills</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto">
               A comprehensive overview of my technical expertise and core competencies
@@ -385,7 +372,7 @@ const Index = () => {
 
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 mb-16">
             <div className="animate-fade-in">
-              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-blue-400">Technical Skills</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-yellow-400">Technical Skills</h2>
               <div className="space-y-6">
                 {technicalSkills.map((skill, index) => (
                   <div key={index} className="space-y-2">
@@ -406,7 +393,7 @@ const Index = () => {
             </div>
 
             <div className="animate-fade-in">
-              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-indigo-400">Soft Skills</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-8 text-orange-400">Soft Skills</h2>
               <div className="space-y-6">
                 {softSkills.map((skill, index) => (
                   <div key={index} className="space-y-2">
@@ -417,7 +404,7 @@ const Index = () => {
                     <div className="relative">
                       <Progress value={skill.level} className="h-3 bg-slate-800" />
                       <div 
-                        className="absolute top-0 left-0 h-3 rounded-full bg-gradient-to-r from-indigo-400 to-purple-600 transition-all duration-1000 ease-out"
+                        className="absolute top-0 left-0 h-3 rounded-full bg-gradient-to-r from-yellow-400 to-orange-600 transition-all duration-1000 ease-out"
                         style={{ width: `${skill.level}%` }}
                       ></div>
                     </div>
@@ -433,18 +420,18 @@ const Index = () => {
       <section id="portfolio" className="min-h-screen pt-24 px-4 relative overflow-hidden">
         {/* Professional background for Portfolio section */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-800/50 via-blue-900/20 to-indigo-800/30"></div>
-          <div className="absolute top-0 left-1/3 w-80 h-80 bg-gradient-to-br from-blue-500/12 to-indigo-500/12 rounded-full blur-3xl animate-pulse delay-400"></div>
-          <div className="absolute bottom-0 right-1/3 w-80 h-80 bg-gradient-to-tl from-indigo-500/12 to-purple-500/12 rounded-full blur-3xl animate-pulse delay-900"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-800/50 via-slate-900/30 to-slate-800/50"></div>
+          <div className="absolute top-0 left-1/3 w-80 h-80 bg-gradient-to-br from-yellow-500/12 to-orange-500/12 rounded-full blur-3xl animate-pulse delay-400"></div>
+          <div className="absolute bottom-0 right-1/3 w-80 h-80 bg-gradient-to-tl from-orange-500/12 to-yellow-500/12 rounded-full blur-3xl animate-pulse delay-900"></div>
           
           {/* Professional tech pattern */}
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.04%22%3E%3Cpath%20d%3D%22M0%200h20v20H0v20h20V20h20V0H20z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23fbbf24%22%20fill-opacity%3D%220.04%22%3E%3Cpath%20d%3D%22M0%200h20v20H0v20h20V20h20V0H20z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
         </div>
         
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              My <span className="bg-gradient-to-r from-blue-400 to-indigo-600 bg-clip-text text-transparent">Portfolio</span>
+              My <span className="bg-gradient-to-r from-yellow-400 to-orange-600 bg-clip-text text-transparent">Portfolio</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto">
               Showcasing my latest projects and technical achievements
@@ -453,7 +440,7 @@ const Index = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {projects.map((project, index) => (
-              <Card key={index} className="bg-slate-800/40 border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:scale-105 group backdrop-blur-sm">
+              <Card key={index} className="bg-slate-800/40 border-slate-700/50 hover:border-yellow-500/50 transition-all duration-300 hover:scale-105 group backdrop-blur-sm">
                 <div className="relative overflow-hidden">
                   <img 
                     src={project.image} 
@@ -462,13 +449,13 @@ const Index = () => {
                     loading="lazy"
                   />
                   <div className="absolute top-4 right-4">
-                    <span className="px-3 py-1 bg-gradient-to-r from-blue-500/80 to-indigo-600/80 rounded-full text-white text-xs font-medium">
+                    <span className="px-3 py-1 bg-gradient-to-r from-yellow-500/80 to-orange-600/80 rounded-full text-white text-xs font-medium">
                       {project.category}
                     </span>
                   </div>
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-blue-400 group-hover:text-blue-300 transition-colors text-lg">
+                  <CardTitle className="text-yellow-400 group-hover:text-yellow-300 transition-colors text-lg">
                     {project.title}
                   </CardTitle>
                 </CardHeader>
@@ -478,7 +465,7 @@ const Index = () => {
                   </p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {project.technologies.slice(0, 3).map((tech, techIndex) => (
-                      <span key={techIndex} className="px-2 py-1 bg-gradient-to-r from-blue-500/20 to-indigo-600/20 rounded text-xs text-slate-300 border border-blue-500/30">
+                      <span key={techIndex} className="px-2 py-1 bg-gradient-to-r from-yellow-500/20 to-orange-600/20 rounded text-xs text-slate-300 border border-yellow-500/30">
                         {tech}
                       </span>
                     ))}
@@ -492,7 +479,7 @@ const Index = () => {
                     <Button 
                       size="sm" 
                       variant="outline" 
-                      className="flex-1 border-blue-500/50 text-blue-400 hover:bg-blue-500/10"
+                      className="flex-1 border-yellow-500/50 text-yellow-400 hover:bg-yellow-500/10"
                       asChild
                     >
                       <a href={project.github} target="_blank" rel="noopener noreferrer">
@@ -501,7 +488,7 @@ const Index = () => {
                     </Button>
                     <Button 
                       size="sm" 
-                      className="flex-1 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700"
+                      className="flex-1 bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-600 hover:to-orange-700"
                       asChild
                     >
                       <a href={project.live} target="_blank" rel="noopener noreferrer">
@@ -520,18 +507,18 @@ const Index = () => {
       <section id="contact" className="min-h-screen pt-24 px-4 pb-8 relative overflow-hidden">
         {/* Professional background for Contact section */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/60 via-blue-900/30 to-indigo-900/50"></div>
-          <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-l from-indigo-500/15 to-blue-500/15 rounded-full blur-3xl animate-pulse delay-600"></div>
-          <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-500/15 to-purple-500/15 rounded-full blur-3xl animate-pulse delay-1200"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/60 via-slate-800/30 to-slate-900/50"></div>
+          <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-l from-orange-500/15 to-yellow-500/15 rounded-full blur-3xl animate-pulse delay-600"></div>
+          <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-yellow-500/15 to-orange-500/15 rounded-full blur-3xl animate-pulse delay-1200"></div>
           
           {/* Professional circuit pattern */}
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.04%22%3E%3Cpath%20d%3D%22M30%200v30H0v30h30V30h30V0H30z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-25"></div>
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23fbbf24%22%20fill-opacity%3D%220.04%22%3E%3Cpath%20d%3D%22M30%200v30H0v30h30V30h30V0H30z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-25"></div>
         </div>
         
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Get In <span className="bg-gradient-to-r from-blue-400 to-indigo-600 bg-clip-text text-transparent">Touch</span>
+              Get In <span className="bg-gradient-to-r from-yellow-400 to-orange-600 bg-clip-text text-transparent">Touch</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-400 mb-12">
               Let's discuss your next project or collaboration opportunity
@@ -542,35 +529,35 @@ const Index = () => {
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-6 text-blue-400">Contact Information</h3>
+                <h3 className="text-2xl md:text-3xl font-bold mb-6 text-yellow-400">Contact Information</h3>
                 <div className="space-y-6">
                   <div className="flex items-center gap-4 p-4 bg-slate-800/40 rounded-lg border border-slate-700/50 backdrop-blur-sm">
-                    <div className="p-3 bg-gradient-to-r from-blue-500/20 to-indigo-600/20 rounded-lg">
-                      <Mail className="w-6 h-6 text-blue-400" />
+                    <div className="p-3 bg-gradient-to-r from-yellow-500/20 to-orange-600/20 rounded-lg">
+                      <Mail className="w-6 h-6 text-yellow-400" />
                     </div>
                     <div>
                       <p className="text-slate-400 text-sm">Email</p>
-                      <a href="mailto:joshiaakashhld@gmail.com" className="text-slate-300 hover:text-blue-400 transition-colors">
+                      <a href="mailto:joshiaakashhld@gmail.com" className="text-slate-300 hover:text-yellow-400 transition-colors">
                         joshiaakashhld@gmail.com
                       </a>
                     </div>
                   </div>
                   
                   <div className="flex items-center gap-4 p-4 bg-slate-800/40 rounded-lg border border-slate-700/50 backdrop-blur-sm">
-                    <div className="p-3 bg-gradient-to-r from-blue-500/20 to-indigo-600/20 rounded-lg">
-                      <Phone className="w-6 h-6 text-blue-400" />
+                    <div className="p-3 bg-gradient-to-r from-yellow-500/20 to-orange-600/20 rounded-lg">
+                      <Phone className="w-6 h-6 text-yellow-400" />
                     </div>
                     <div>
                       <p className="text-slate-400 text-sm">Phone</p>
-                      <a href="tel:9045685738" className="text-slate-300 hover:text-blue-400 transition-colors">
+                      <a href="tel:9045685738" className="text-slate-300 hover:text-yellow-400 transition-colors">
                         +91 9045685738
                       </a>
                     </div>
                   </div>
                   
                   <div className="flex items-center gap-4 p-4 bg-slate-800/40 rounded-lg border border-slate-700/50 backdrop-blur-sm">
-                    <div className="p-3 bg-gradient-to-r from-blue-500/20 to-indigo-600/20 rounded-lg">
-                      <MapPin className="w-6 h-6 text-blue-400" />
+                    <div className="p-3 bg-gradient-to-r from-yellow-500/20 to-orange-600/20 rounded-lg">
+                      <MapPin className="w-6 h-6 text-yellow-400" />
                     </div>
                     <div>
                       <p className="text-slate-400 text-sm">Location</p>
@@ -580,7 +567,7 @@ const Index = () => {
                 </div>
 
                 <div className="mt-8">
-                  <h4 className="text-xl font-bold mb-4 text-indigo-400">Let's Connect</h4>
+                  <h4 className="text-xl font-bold mb-4 text-orange-400">Let's Connect</h4>
                   <p className="text-slate-300 mb-6">
                     I'm always open to discussing new opportunities, collaborations, or just having a chat about technology and innovation.
                   </p>
@@ -589,17 +576,17 @@ const Index = () => {
                       href="https://github.com/26Aakash" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="p-3 rounded-full bg-slate-800/50 hover:bg-gradient-to-r hover:from-blue-500/20 hover:to-indigo-600/20 transition-all duration-300 hover:scale-110 backdrop-blur-sm border border-slate-700/50"
+                      className="p-3 rounded-full bg-slate-800/50 hover:bg-gradient-to-r hover:from-yellow-500/20 hover:to-orange-600/20 transition-all duration-300 hover:scale-110 backdrop-blur-sm border border-slate-700/50"
                     >
-                      <Github className="w-6 h-6 text-slate-400 hover:text-white" />
+                      <Github className="w-6 h-6 text-slate-400 hover:text-yellow-400" />
                     </a>
                     <a 
                       href="https://www.linkedin.com/in/aakash-joshi-8a1a63298/" 
                       target="_blank" 
                       rel="noopener noreferrer"
-                      className="p-3 rounded-full bg-slate-800/50 hover:bg-gradient-to-r hover:from-blue-500/20 hover:to-indigo-600/20 transition-all duration-300 hover:scale-110 backdrop-blur-sm border border-slate-700/50"
+                      className="p-3 rounded-full bg-slate-800/50 hover:bg-gradient-to-r hover:from-yellow-500/20 hover:to-orange-600/20 transition-all duration-300 hover:scale-110 backdrop-blur-sm border border-slate-700/50"
                     >
-                      <Linkedin className="w-6 h-6 text-slate-400 hover:text-white" />
+                      <Linkedin className="w-6 h-6 text-slate-400 hover:text-yellow-400" />
                     </a>
                   </div>
                 </div>
@@ -610,7 +597,7 @@ const Index = () => {
             <div>
               <Card className="bg-slate-800/40 border-slate-700/50 backdrop-blur-sm">
                 <CardHeader>
-                  <CardTitle className="text-2xl text-center text-blue-400 flex items-center justify-center gap-2">
+                  <CardTitle className="text-2xl text-center text-yellow-400 flex items-center justify-center gap-2">
                     <MessageCircle className="w-6 h-6" />
                     Send Me a Message
                   </CardTitle>
@@ -626,7 +613,7 @@ const Index = () => {
                           id="name"
                           type="text"
                           placeholder="Your Name"
-                          className="bg-slate-900/50 border-slate-600 text-white placeholder-slate-400 focus:border-blue-500"
+                          className="bg-slate-900/50 border-slate-600 text-white placeholder-slate-400 focus:border-yellow-500"
                           required
                         />
                       </div>
@@ -638,7 +625,7 @@ const Index = () => {
                           id="email"
                           type="email"
                           placeholder="your@email.com"
-                          className="bg-slate-900/50 border-slate-600 text-white placeholder-slate-400 focus:border-blue-500"
+                          className="bg-slate-900/50 border-slate-600 text-white placeholder-slate-400 focus:border-yellow-500"
                           required
                         />
                       </div>
@@ -652,7 +639,7 @@ const Index = () => {
                         id="subject"
                         type="text"
                         placeholder="Project Discussion"
-                        className="bg-slate-900/50 border-slate-600 text-white placeholder-slate-400 focus:border-blue-500"
+                        className="bg-slate-900/50 border-slate-600 text-white placeholder-slate-400 focus:border-yellow-500"
                         required
                       />
                     </div>
@@ -665,14 +652,14 @@ const Index = () => {
                         id="message"
                         rows={5}
                         placeholder="Tell me about your project or just say hello..."
-                        className="bg-slate-900/50 border-slate-600 text-white placeholder-slate-400 focus:border-blue-500 resize-none"
+                        className="bg-slate-900/50 border-slate-600 text-white placeholder-slate-400 focus:border-yellow-500 resize-none"
                         required
                       />
                     </div>
                     
                     <Button
                       type="submit"
-                      className="w-full bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white py-3 font-medium flex items-center justify-center gap-2"
+                      className="w-full bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-600 hover:to-orange-700 text-black py-3 font-bold flex items-center justify-center gap-2"
                     >
                       <Send className="w-5 h-5" />
                       Send Message
