@@ -9,12 +9,12 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
-      {/* Dark navy background with geometric pattern */}
-      <div className="fixed inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
+    <div className="min-h-screen bg-black text-white">
+      {/* Very dark background with deep navy gradient */}
+      <div className="fixed inset-0 bg-gradient-to-br from-black via-gray-900 to-slate-900"></div>
       
-      {/* Geometric line pattern overlay */}
-      <div className="fixed inset-0 opacity-20">
+      {/* Geometric line pattern overlay with reduced opacity */}
+      <div className="fixed inset-0 opacity-10">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <pattern id="geometric-lines" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
@@ -30,10 +30,10 @@ const Layout = ({ children }: LayoutProps) => {
         </svg>
       </div>
       
-      {/* Subtle ambient lighting effects */}
+      {/* Very subtle ambient lighting effects */}
       <div className="fixed inset-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-yellow-500/10 to-orange-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-l from-orange-500/10 to-yellow-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-yellow-500/5 to-orange-500/5 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-l from-orange-500/5 to-yellow-500/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
       
       <Navbar />

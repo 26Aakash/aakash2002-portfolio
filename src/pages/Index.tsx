@@ -116,21 +116,21 @@ const Index = () => {
     <Layout>
       {/* Home Section */}
       <section id="home" className="min-h-screen flex items-center justify-center px-4 py-8 relative overflow-hidden">
-        {/* Enhanced background with yellow/orange theme */}
+        {/* Much darker background */}
         <div className="absolute inset-0">
-          {/* Primary gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
+          {/* Primary dark gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
           
-          {/* Yellow/Orange geometric elements */}
+          {/* Very subtle yellow/orange geometric elements */}
           <div className="absolute top-0 left-0 w-full h-full">
-            <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-yellow-500/15 to-orange-600/15 rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-tl from-orange-500/15 to-yellow-600/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
-            <div className="absolute top-1/2 left-1/3 w-96 h-96 bg-gradient-to-r from-yellow-500/10 to-orange-600/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+            <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-yellow-500/8 to-orange-600/8 rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-tl from-orange-500/8 to-yellow-600/8 rounded-full blur-3xl animate-pulse delay-1000"></div>
+            <div className="absolute top-1/2 left-1/3 w-96 h-96 bg-gradient-to-r from-yellow-500/6 to-orange-600/6 rounded-full blur-3xl animate-pulse delay-500"></div>
           </div>
           
-          {/* Geometric line patterns */}
+          {/* Geometric line patterns with lower opacity */}
           <div className="absolute inset-0">
-            <svg width="100%" height="100%" className="opacity-30">
+            <svg width="100%" height="100%" className="opacity-15">
               <g stroke="#fbbf24" strokeWidth="1" fill="none">
                 <path d="M0,200 Q400,50 800,200" opacity="0.4"/>
                 <path d="M200,0 Q600,300 1000,100" opacity="0.3"/>
@@ -146,12 +146,12 @@ const Index = () => {
             </svg>
           </div>
           
-          {/* Floating elements */}
+          {/* Floating elements with reduced opacity */}
           <div className="absolute inset-0">
             {[...Array(20)].map((_, i) => (
               <div
                 key={i}
-                className="absolute w-1 h-1 bg-yellow-400/60 rounded-full animate-pulse"
+                className="absolute w-1 h-1 bg-yellow-400/30 rounded-full animate-pulse"
                 style={{
                   left: `${Math.random() * 100}%`,
                   top: `${Math.random() * 100}%`,
@@ -186,7 +186,7 @@ const Index = () => {
                 </h1>
                 
                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-slate-300 mb-6">
-                  <span className="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-yellow-400 to-orange-600 bg-clip-text text-transparent">
                     A Passionate Full Stack Web Developer
                   </span>
                 </h2>
@@ -273,12 +273,12 @@ const Index = () => {
       {/* About Section */}
       <section id="about" className="min-h-screen pt-24 px-4 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-800/50 via-slate-900/30 to-slate-800/50"></div>
-          <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-l from-yellow-500/15 to-transparent rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-72 h-72 bg-gradient-to-r from-orange-500/15 to-transparent rounded-full blur-3xl"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-black/60 to-gray-900/80"></div>
+          <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-l from-yellow-500/8 to-transparent rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-72 h-72 bg-gradient-to-r from-orange-500/8 to-transparent rounded-full blur-3xl"></div>
           
-          {/* Professional geometric pattern */}
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23fbbf24%22%20fill-opacity%3D%220.04%22%3E%3Cpath%20d%3D%22M36%2030c0-3.314-2.686-6-6-6s-6%202.686-6%206%202.686%206%206%206%206-2.686%206-6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-40"></div>
+          {/* Professional geometric pattern with lower opacity */}
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23fbbf24%22%20fill-opacity%3D%220.02%22%3E%3Cpath%20d%3D%22M36%2030c0-3.314-2.686-6-6-6s-6%202.686-6%206%202.686%206%206%206%206-2.686%206-6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
         </div>
         
         <div className="max-w-6xl mx-auto relative z-10">
@@ -352,12 +352,12 @@ const Index = () => {
       {/* Skills Section */}
       <section id="skills" className="min-h-screen pt-24 px-4 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/60 via-slate-800/25 to-slate-900/40"></div>
-          <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-gradient-to-r from-yellow-500/15 to-orange-500/15 rounded-full blur-2xl animate-pulse delay-200"></div>
-          <div className="absolute bottom-1/3 right-1/4 w-64 h-64 bg-gradient-to-r from-orange-500/15 to-yellow-500/15 rounded-full blur-2xl animate-pulse delay-700"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-gray-900/50 to-black/80"></div>
+          <div className="absolute top-1/3 left-1/4 w-64 h-64 bg-gradient-to-r from-yellow-500/8 to-orange-500/8 rounded-full blur-2xl animate-pulse delay-200"></div>
+          <div className="absolute bottom-1/3 right-1/4 w-64 h-64 bg-gradient-to-r from-orange-500/8 to-yellow-500/8 rounded-full blur-2xl animate-pulse delay-700"></div>
           
-          {/* Professional hexagon pattern */}
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23fbbf24%22%20fill-opacity%3D%220.04%22%3E%3Cpath%20d%3D%22M40%2020L20%2040l20%2020%2020-20-20-20z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+          {/* Professional hexagon pattern with very low opacity */}
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2280%22%20height%3D%2280%22%20viewBox%3D%220%200%2080%2080%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23fbbf24%22%20fill-opacity%3D%220.02%22%3E%3Cpath%20d%3D%22M40%2020L20%2040l20%2020%2020-20-20-20z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-15"></div>
         </div>
         
         <div className="max-w-6xl mx-auto relative z-10">
@@ -418,14 +418,14 @@ const Index = () => {
 
       {/* Portfolio Section */}
       <section id="portfolio" className="min-h-screen pt-24 px-4 relative overflow-hidden">
-        {/* Professional background for Portfolio section */}
+        {/* Much darker background for Portfolio section */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-800/50 via-slate-900/30 to-slate-800/50"></div>
-          <div className="absolute top-0 left-1/3 w-80 h-80 bg-gradient-to-br from-yellow-500/12 to-orange-500/12 rounded-full blur-3xl animate-pulse delay-400"></div>
-          <div className="absolute bottom-0 right-1/3 w-80 h-80 bg-gradient-to-tl from-orange-500/12 to-yellow-500/12 rounded-full blur-3xl animate-pulse delay-900"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-900/80 via-black/60 to-gray-900/80"></div>
+          <div className="absolute top-0 left-1/3 w-80 h-80 bg-gradient-to-br from-yellow-500/6 to-orange-500/6 rounded-full blur-3xl animate-pulse delay-400"></div>
+          <div className="absolute bottom-0 right-1/3 w-80 h-80 bg-gradient-to-tl from-orange-500/6 to-yellow-500/6 rounded-full blur-3xl animate-pulse delay-900"></div>
           
-          {/* Professional tech pattern */}
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23fbbf24%22%20fill-opacity%3D%220.04%22%3E%3Cpath%20d%3D%22M0%200h20v20H0v20h20V20h20V0H20z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+          {/* Professional tech pattern with very low opacity */}
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2240%22%20height%3D%2240%22%20viewBox%3D%220%200%2040%2040%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23fbbf24%22%20fill-opacity%3D%220.02%22%3E%3Cpath%20d%3D%22M0%200h20v20H0v20h20V20h20V0H20z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-15"></div>
         </div>
         
         <div className="max-w-6xl mx-auto relative z-10">
@@ -505,14 +505,14 @@ const Index = () => {
 
       {/* Contact Section */}
       <section id="contact" className="min-h-screen pt-24 px-4 pb-8 relative overflow-hidden">
-        {/* Professional background for Contact section */}
+        {/* Very dark background for Contact section */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/60 via-slate-800/30 to-slate-900/50"></div>
-          <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-l from-orange-500/15 to-yellow-500/15 rounded-full blur-3xl animate-pulse delay-600"></div>
-          <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-yellow-500/15 to-orange-500/15 rounded-full blur-3xl animate-pulse delay-1200"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-gray-900/60 to-black/80"></div>
+          <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-to-l from-orange-500/8 to-yellow-500/8 rounded-full blur-3xl animate-pulse delay-600"></div>
+          <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-yellow-500/8 to-orange-500/8 rounded-full blur-3xl animate-pulse delay-1200"></div>
           
-          {/* Professional circuit pattern */}
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23fbbf24%22%20fill-opacity%3D%220.04%22%3E%3Cpath%20d%3D%22M30%200v30H0v30h30V30h30V0H30z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-25"></div>
+          {/* Professional circuit pattern with very low opacity */}
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23fbbf24%22%20fill-opacity%3D%220.02%22%3E%3Cpath%20d%3D%22M30%200v30H0v30h30V30h30V0H30z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-12"></div>
         </div>
         
         <div className="max-w-6xl mx-auto relative z-10">
