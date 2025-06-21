@@ -1,3 +1,4 @@
+
 import Layout from '@/components/Layout';
 import { Button } from '@/components/ui/button';
 import { Github, Linkedin, Mail, Phone, Download, GraduationCap, Calendar, MapPin, Send, User, MessageCircle } from 'lucide-react';
@@ -174,14 +175,14 @@ const Index = () => {
             <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 mb-12">
               <div className="flex-1 text-center lg:text-left">
                 <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6">
-                  <span className="wave inline-block">👋</span> Hello! I'm{' '}
+                  <span className="wave inline-block">👋</span> Hello I'm{' '}
                   <br className="hidden md:block" />
                   <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-500 bg-clip-text text-transparent animate-pulse">
-                    Fullstack Developer
+                    Aakash Joshi
                   </span>
                   <br className="hidden md:block" />
                   <span className="text-2xl md:text-3xl lg:text-4xl text-slate-300 font-light">
-                    Aakash Joshi ✨
+                    a passionate full stack developer ✨
                   </span>
                 </h1>
                 
